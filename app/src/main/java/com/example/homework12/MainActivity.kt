@@ -14,12 +14,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val flSendButton : FrameLayout = findViewById(R.id.flSendButton)
-        val emailFiled : EditText = findViewById(R.id.email)
-        val subjectFiled : EditText = findViewById(R.id.subject)
-        val messageFiled : EditText = findViewById(R.id.message)
+        val flSendButton: FrameLayout = findViewById(R.id.flSendButton)
+        val emailFiled: EditText = findViewById(R.id.email)
+        val subjectFiled: EditText = findViewById(R.id.subject)
+        val messageFiled: EditText = findViewById(R.id.message)
 
-        flSendButton.setOnClickListener{
+        flSendButton.setOnClickListener {
             val email = emailFiled.text.toString()
             val subject = subjectFiled.text.toString()
             val message = messageFiled.text.toString()
@@ -27,9 +27,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun sendEmail(email: String, subject: String, message: String){
+    private fun sendEmail(email: String, subject: String, message: String) {
         val intent = Intent(Intent.ACTION_SEND).apply {
-//            type = "message/rfc822"
             type = "text/plain"
             putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
             putExtra(Intent.EXTRA_SUBJECT, subject)
