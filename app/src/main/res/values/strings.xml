@@ -3,4 +3,5 @@
     <string name="enter_email">email</string>
     <string name="enter_message">message</string>
     <string name="send">SEND</string>
+    <string name="subject">subject</string>
 </resources>
